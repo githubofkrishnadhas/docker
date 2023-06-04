@@ -8,13 +8,11 @@ WORKDIR /app
 
 LABEL MAINTAINER="githubofkrishnadhas <krishnadhasnk1997@gmail.com>"
 
-
-
 #Copy the Pipfile and Pipfile.lock to the working directory
 COPY Pipfile Pipfile.lock ./
 
 # Install Pipenv and the project dependencies
-RUN pip install pipenv && pipenv install --system --deploy
+RUN pip install pipenv && pipenv install --ignore-pipfile
 
 # Copy the application files to the working directory
 COPY app.py ./ 
