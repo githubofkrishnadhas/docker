@@ -5,21 +5,22 @@ FROM python:3.9-slim
 WORKDIR /app
 
 #Setting Label
-LLLelL
-LLLelL
-LelLACopyLabelLACopLLLelLelLACLelLACopyLabelLACopLLLelLelLelLACopyLabelLACopLLLelL
 
-# CopyCCopyCoCopyCCopyCopyopypyopy the Pipfile and Pipfile.lock to the working directory
+LABEL MAINTAINER="githubofkrishnadhas <krishnadhasnk1997@gmail.com>"
+
+
+
+#Copy the Pipfile and Pipfile.lock to the working directory
 COPY Pipfile Pipfile.lock ./
 
 # Install Pipenv and the project dependencies
 RUN pip install pipenv && pipenv install --system --deploy
 
 # Copy the application files to the working directory
-COPY script.py ./
+COPY app.py ./ 
 
 # Set the default command to run the script with pipenv
-CMD ["pipenv", "run", "python", "scriscri
-pt.py"]
 
-CopyCCopyCoCCopyCCopyC
+CMD ["pipenv", "run", "python", "app.py"]
+
+
