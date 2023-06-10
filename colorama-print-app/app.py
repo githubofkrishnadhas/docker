@@ -13,11 +13,12 @@ def print_with_random_color(text):
     print(color + text)
 
 # Add default print statement with instructions
-print("Welcome! To print text with random colors, use the following syntax:")
+print("Welcome! To print text with random colors, used the following syntax inside:")
 print("python app.py 'Your text here'")
 print("Enjoy the colorful output!")
-print("As a docker image use like: docker run <imagename> 'Your text here'")
-print("Eg: docker run colorama-print-app 'Hello, World!'")
+print("As a docker image use like: docker run -it <imagename>")
+print("Eg: docker run -it colorama-print-app")
+print("Enter your input once prompted.if empty input is provided default statement is printed.")
 
 # Check if a command-line argument is provided
 if len(sys.argv) > 1:
