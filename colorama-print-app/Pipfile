@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 colorama = "*"
 random2 = "*"
+argparse = "==1.4.0"
 
 [dev-packages]
 
